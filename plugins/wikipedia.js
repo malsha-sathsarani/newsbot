@@ -30,7 +30,7 @@ export default handler
 
 /* New Line */
 async function Wiki(query) {
-  const res = await fetch(`https://ar.m.wikipedia.org/w/index.php?search=${query}`);
+  const res = await fetch(`https://en.m.wikipedia.org/w/index.php?search=${query}`);
   const html = await res.text();
   const $ = cheerio.load(html);
   const wiki = $('#mf-section-0').find('p').text();
