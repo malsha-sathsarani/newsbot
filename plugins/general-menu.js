@@ -28,7 +28,7 @@ const defaultMenu = {
 `.trimStart(),
   body: `> ➦ _%cmd%islimit%isPremium_ `,
   footer: ' ',
-  after: `╰───────────\t _© ${conn.user.name}_ \t`,
+  after: `\t Develop by Jessi2Devolop Team \t`,
 }
   try {
     let name = m.pushName || conn.getName(m.sender)
