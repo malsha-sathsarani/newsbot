@@ -10,14 +10,14 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 let tags = {}
 const defaultMenu = {
   before: `
-*⏱️ Jessi Md - bot_*
+> *⏱️ Jessi Md - bot_*
 
-*♻️ Library : [ Baileys-MD ]_*
-*🕹 Prefix : [ %_p ]_*
-*💻Platform : [ %platform ]_*
-*⏲️ Uptime : [ %muptime ]_*
-*📆 Date : [ %date ]_*
-*📟 Database : [ %totalreg ]_*
+> *♻️ Library : [ Baileys-MD ]_*
+> *🕹 Prefix : [ %_p ]_*
+> *💻Platform : [ %platform ]_*
+> *⏲️ Uptime : [ %muptime ]_*
+> *📆 Date : [ %date ]_*
+> *📟 Database : [ %totalreg ]_*
 
 %readmore
 `.trimStart(),
@@ -26,7 +26,7 @@ const defaultMenu = {
 │   %category  
 ╰───────────╯
     `.trimStart(),
-  body: `│ \t ➦ _%cmd%islimit%isPremium_ `,
+  body: `> ➦ _%cmd%islimit%isPremium_ `,
   footer: '│',
   after: `╰───────────\t _© ${conn.user.name}_ \t`,
 }
