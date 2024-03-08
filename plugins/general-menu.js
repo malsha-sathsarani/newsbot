@@ -22,12 +22,11 @@ const defaultMenu = {
 %readmore
 `.trimStart(),
   header: `
-╭───────────╮
-│   %category  
-╰───────────╯
-    `.trimStart(),
+  *❐ %category*  
+
+`.trimStart(),
   body: `> ➦ _%cmd%islimit%isPremium_ `,
-  footer: '│',
+  footer: ' ',
   after: `╰───────────\t _© ${conn.user.name}_ \t`,
 }
   try {
