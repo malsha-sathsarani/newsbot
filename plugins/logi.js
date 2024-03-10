@@ -173,7 +173,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	  case '3dbox':
 		if (!text) throw tee;
 		let nhut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/3dboxtext?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, ohut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		conn.sendFile(m.chat, nhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
