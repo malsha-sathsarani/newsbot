@@ -1,21 +1,20 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!text) {
+    if (!args[0]) {
         await m.react('🫡');
         return m.reply(`Use example ${usedPrefix}${command} link`);
     }
-    
+
     await m.react('🕥');
-    
+
     try {
-        let response = await fetch(`https://api-rest-jessi2devolop.koyeb.app/api/dowloader/fbdown?url=${args[0]}`);
+        let response = await fetch(`https://api-rest-jessi2devolop.koyeb.app/api/downloader/fbdown?url=${args[0]}`);
         let data = await response.json();
-    await m.react('🕚');
-        
+        await m.react('🕚');
+
         if (data.status && data.result) {
-          
-            await conn.sendMessage(m.chat, { video: { url: data.result.Normal_video } }, { quoted: m }); 
+            await conn.sendMessage(m.chat, { video: { url: data.result.Normal_video } }, { quoted: m });
             return m.react('✅');
         } else {
             throw new Error('Error in response data');
