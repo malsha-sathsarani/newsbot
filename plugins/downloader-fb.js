@@ -15,7 +15,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         
         if (data.status && data.result) {
           
-            await conn.sendMessage(m.chat, { video: { url: data.result[0].Normal_video } }, { quoted: m }); 
+            await conn.sendMessage(m.chat, { video: { url: data.result.Normal_video } }, { quoted: m }); 
             return m.react('✅');
         } else {
             throw new Error('Error in response data');
