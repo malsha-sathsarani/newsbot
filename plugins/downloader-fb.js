@@ -1,34 +1,42 @@
 import fetch from 'node-fetch';
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!/https?:\/\/(www\.)?facebook\.com\/(fb|.watch|tv)/i.test(args[0])) {
-        await m.react('🫡');
-        return m.reply(`Use example ${usedPrefix}${command} link`);
-    }
-    
-    await m.react('🕥');
-    
-    try {
-        let response = await fetch(`https://api-rest-jessi2devolop.koyeb.app/api/dowloader/fbdown?url=${args[0]}`);
-        let data = await response.json();
-    await m.react('🕚');
-        
-        if (data.status && data.result) {
-          
-            await conn.sendMessage(m.chat, { video: { url: data.result.Normal_video } }, { quoted: m }); 
-            return m.react('✅');
-        } else {
-            throw new Error('Error in response data');
-        }
-    } catch (error) {
-        console.error('Error:', error.message);
-        m.reply('Failed to fetch fb data. Please try again later.');
-        await m.react('😑');
-    }
-}
+let handler = async (m, { conn, usedPrefix, args, command, text }) => {
+  if (!text) throw `You need to give the URL of Any Facebook video, post, reel, image`;
+  m.reply(wait);
 
-handler.help = ['facebook <url>']
-handler.tags = ['downloader']
-handler.command = /^((facebook|fb)(downloder|dl)?)$/i
+  let res;
+  try {
+    res = await fetch(`https://api-rest-jessi2devolop.koyeb.app/api/dowloader/fbdown?url=${text}`);
+  } catch (error) {
+    throw `An error occurred: ${error.message}`;
+  }
+
+  let api_response = await res.json();
+
+  if (!api_response || !api_response.data) {
+    throw `No video or image found or Invalid response from API.`;
+  }
+
+  const mediaArray = api_response.data;
+
+  for (const mediaData of mediaArray) {
+    const mediaType = mediaData.type;
+    const mediaURL = mediaData.url_download;
+
+    let cap = `HERE IS THE ${mediaType.toUpperCase()} >,<`;
+
+    if (mediaType === 'video') {
+      
+      conn.sendFile(m.chat, mediaURL, 'facebook.mp4', cap, m);
+    } else if (mediaType === 'image') {
+      
+      conn.sendFile(m.chat, mediaURL, 'facebook.jpg', cap, m);
+    }
+  }
+};
+
+handler.help = ['facebook'];
+handler.tags = ['downloader'];
+handler.command = /^(facebook|fbdll|fb|fbdwn)$/i;
 
 export default handler;
