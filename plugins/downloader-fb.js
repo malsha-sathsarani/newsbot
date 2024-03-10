@@ -1,33 +1,36 @@
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'
+import fg from 'api-dylux'
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) {
-        await m.react('🫡');
-        return m.reply(`Use example ${usedPrefix}${command} link`);
-    }
 
-    await m.react('🕥');
+const handler = async (m, { conn, args, usedPrefix, command }) => {
+  if (!args[0]) {
+    throw `✳️ Please send the link of a Facebook video\n\n📌 EXAMPLE :\n*${usedPrefix + command}* https://www.facebook.com/Ankursajiyaan/videos/981948876160874/?mibextid=rS40aB7S9Ucbxw6v`;
+  }
 
-    try {
-        let response = await fetch(`https://api-rest-jessi2devolop.koyeb.app/api/downloader/fbdown?url=${args[0]}`);
-        let data = await response.json();
-        await m.react('🕚');
+  const urlRegex = /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.watch)\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
+  if (!urlRegex.test(args[0])) {
+    throw '⚠️ PLEASE GIVE A VALID URL.'
+  }
 
-        if (data.status && data.result) {
-            await conn.sendMessage(m.chat, { video: { url: data.result.Normal_video } }, { quoted: m });
-            return m.react('✅');
-        } else {
-            throw new Error('Error in response data');
-        }
-    } catch (error) {
-        console.error('Error:', error.message);
-        m.reply('Failed to fetch fb data. Please try again later.');
-        await m.react('😑');
-    }
+ await conn.relayMessage(m.chat, { reactionMessage: { key: m.key, text: '⌛'  }}, { messageId: m.key.id })
+
+  try {
+    const result = await fg.fbdl(args[0]);
+    const tex = `*${result.title}*`
+
+    const response = await fetch(result.videoUrl)
+    const arrayBuffer = await response.arrayBuffer()
+    const videoBuffer = Buffer.from(arrayBuffer)
+    
+    conn.sendFile(m.chat, videoBuffer, 'fb.mp4', tex, m)
+  } catch (error) {
+    console.log(error)
+    m.reply('⚠️ An error occurred while processing the request. Please try again later.')
+  }
 }
 
 handler.help = ['facebook <url>']
 handler.tags = ['downloader']
 handler.command = /^((facebook|fb)(downloder|dl)?)$/i
 
-export default handler;
+export default handler
