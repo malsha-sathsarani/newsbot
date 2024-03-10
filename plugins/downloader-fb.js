@@ -1,42 +1,22 @@
-import fetch from 'node-fetch';
+let handler = async(m, { conn, text, usedPrefix, command }) => {
+	if (!text) throw `*Usage : ${usedPrefix + command} fb_url_video*\n\nExample :\n${usedPrefix + command} `
+	if (!(text.includes('http://') || text.includes('https://'))) throw `url invalid, please input a valid url. Try with add http:// or https://`
+	try {
+		let anu = await fetch(`https://api-rest-jessi2devolop.koyeb.app/api/dowloader/fbdown?url=${text}`)
+		let json = await anu.json()
+		let txt = `${json.hasil.title}`
+		await conn.sendMsg(m.chat, { video: { url: json.hasil.watermark }, caption: json.hasil.title }, { quoted: m })
+	} catch (e) {
+		console.log(e)
+		m.reply(`Invalid facebook url.`)
+	}
+}
 
-let handler = async (m, { conn, usedPrefix, args, command, text }) => {
-  if (!text) throw `You need to give the URL of Any Facebook video, post, reel, image`;
-  m.reply(wait);
+handler.menudownload = ['fb <url>']
+handler.tagsdownload = ['search']
+handler.command = /^(facebook(fb)?)$/i
 
-  let res;
-  try {
-    res = await fetch(`https://api-rest-jessi2devolop.koyeb.app/api/dowloader/fbdown?url=${text}`);
-  } catch (error) {
-    throw `An error occurred: ${error.message}`;
-  }
+handler.premium = true
+handler.limit = true
 
-  let api_response = await res.json();
-
-  if (!api_response || !api_response.data) {
-    throw `No video or image found or Invalid response from API.`;
-  }
-
-  const mediaArray = api_response.data;
-
-  for (const mediaData of mediaArray) {
-    const mediaType = mediaData.type;
-    const mediaURL = mediaData.url_download;
-
-    let cap = `HERE IS THE ${mediaType.toUpperCase()} >,<`;
-
-    if (mediaType === 'video') {
-      
-      conn.sendFile(m.chat, mediaURL, 'facebook.mp4', cap, m);
-    } else if (mediaType === 'image') {
-      
-      conn.sendFile(m.chat, mediaURL, 'facebook.jpg', cap, m);
-    }
-  }
-};
-
-handler.help = ['facebook'];
-handler.tags = ['downloader'];
-handler.command = /^(facebook|fbdll|fb|fbdwn)$/i;
-
-export default handler;
+export default handler
