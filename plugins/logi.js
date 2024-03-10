@@ -16,99 +16,99 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 		
 	  case 'shadowsky':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/shadow-sky?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let qhut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/shadow-sky?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, qhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
 	  case 'metallic':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/metallic?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let ehut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/metallic?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, ehut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
 	  case 'naruto':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/naruto?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let rhut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/naruto?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, rhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
 		case 'pubg':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/pubg?text=Pubg&text2=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let thut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/pubg?text=Pubg&text2=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, thut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
-		case 'undergrass':
+	  case 'undergrass':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/under-grass?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let yhut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/under-grass?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, yhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break; 
 		
-		case 'harrypotter':
+	  case 'harrypotter':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/harry-potter?text${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let uhut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/harry-potter?text${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, uhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break; 
 		
-		case 'flowertypography':
+	  case 'flowertypography':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/flower-typography?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let ihut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/flower-typography?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, ihut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
-		case 'pictureoflove':
+	  case 'pictureoflove':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/picture-of-love?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let ohut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/picture-of-love?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, ohut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
-		case 'coffeecup':
+	  case 'coffeecup':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/coffee-cup?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let phut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/coffee-cup?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, phut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
-		case 'butterfly':
+	  case 'butterfly':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/butterfly?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let ahut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/butterfly?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, ahut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
-		case 'nightsky':
+	  case 'nightsky':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/night-sky?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let shut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/night-sky?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, shut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
-		case 'carvedwood':
+	  case 'carvedwood':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/carved-wood?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let dhut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/carved-wood?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, dhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
-		case 'ilumimetallic':
+	  case 'ilumimetallic':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/illuminated-metallic?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let fhut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/illuminated-metallic?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, fhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break; 
 		
-		case 'sweetcandy':
+	  case 'sweetcandy':
 		if (!text) throw tee;
-		let chut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/sweet-candy?text=${encodeURIComponent(text)}`;
-		conn.sendFile(m.chat, chut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
+		let ghut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/sweet-candy?text=${encodeURIComponent(text)}`;
+		conn.sendFile(m.chat, ghut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 
