@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!/https?:\/\/(www\.)?facebook\.com\/(fb|.watch|tv)/i.test(args[0])) {
-        await m.react('🤨');
+        await m.react('🫡');
         return m.reply(`Use example ${usedPrefix}${command} link`);
     }
     
@@ -15,7 +15,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         
         if (data.status && data.result) {
           
-            await conn.sendMessage(m.chat, { video: { url: data.result[0].url } }, { quoted: m }); 
+            await conn.sendMessage(m.chat, { video: { url: data.result[0].Normal_video } }, { quoted: m }); 
             return m.react('✅');
         } else {
             throw new Error('Error in response data');
