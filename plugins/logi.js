@@ -207,8 +207,8 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	  case 'marvelstudios':
 		if (!text) throw too
 		if (!text.includes('+')) throw too
-		let [n, m] = text.split`+`
-		let eehut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/marvel-studios?text=${encodeURIComponent(n)}&text2=${encodeURIComponent(m)}}`;
+		let [n, ss] = text.split`+`
+		let eehut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/marvel-studios?text=${encodeURIComponent(n)}&text2=${encodeURIComponent(ss)}}`;
 		conn.sendFile(m.chat, eehut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
