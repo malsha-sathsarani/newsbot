@@ -38,8 +38,8 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 		case 'pubg':
 		if (!text) throw too
 		if (!text.includes('+')) throw too  
-		let [c, d] = text.split`+`
-		let thut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/pubg?text=${encodeURIComponent(c)}&text2=${encodeURIComponent(d)}`;
+		let [j, k] = text.split`+`
+		let thut = `https://api-rest-jessi2devolop.koyeb.app/api/photooxy/pubg?text=${encodeURIComponent(j)}&text2=${encodeURIComponent(k)}`;
 		conn.sendFile(m.chat, thut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
@@ -180,22 +180,26 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	  case 'glitch2':
 		if (!text) throw too
 		if (!text.includes('+')) throw too  
-		let [c, d] = text.split`+`
-		let mhut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/glitch2?text=${encodeURIComponent(c)}&text2=${encodeURIComponent(d)}`;
+		let [l, z] = text.split`+`
+		let mhut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/glitch2?text=${encodeURIComponent(l)}&text2=${encodeURIComponent(z)}`;
 		conn.sendFile(m.chat, mhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
 	  case 'glitchtiktok':
-		if (!text) throw tee;
-		let qqhut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/glitchtiktok?text=${encodeURIComponent(c)}&text2=${encodeURIComponent(d)}`;
+		if (!text) throw too
+		if (!text.includes('+')) throw too
+		let [x, c] = text.split`+`
+		let qqhut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/glitchtiktok?text=${encodeURIComponent(x)}&text2=${encodeURIComponent(c)}`;
 		conn.sendFile(m.chat, qqhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
 		
 	  case 'vgclassic':
-		if (!text) throw tee;
-		let wwhut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/video-game-classic?text=${encodeURIComponent(c)}&text2=${encodeURIComponent(d)}`;
+		if (!text) throw too
+		if (!text.includes('+')) throw too
+		let [v, b] = text.split`+`
+		let wwhut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/video-game-classic?text=${encodeURIComponent(v)}&text2=${encodeURIComponent(b)}`;
 		conn.sendFile(m.chat, wwhut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
@@ -203,8 +207,8 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	  case 'marvelstudios':
 		if (!text) throw too
 		if (!text.includes('+')) throw too
-		let [c, d] = text.split`+`
-		let eehut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/marvel-studios?text=${encodeURIComponent(c)}&text2=${encodeURIComponent(d)}}`;
+		let [n, m] = text.split`+`
+		let eehut = `https://api-rest-jessi2devolop.koyeb.app/api/textpro/marvel-studios?text=${encodeURIComponent(n)}&text2=${encodeURIComponent(m)}}`;
 		conn.sendFile(m.chat, eehut, 'jessidev.png', `*Made By JessiDev Team  💌*`, m);
 		m.react(pwait);
 		break;
