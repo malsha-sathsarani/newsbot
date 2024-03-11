@@ -50,6 +50,7 @@ global.APIKeys = { // APIKey Here
   'https://sekha.me': 'apirey',
   'https://api.chipa.xyz': 'pais',
   'http://hardianto.xyz': 'hardianto',
+  'https://api.itsrose.life': 'memek-apikeylu',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
