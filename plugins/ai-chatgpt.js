@@ -1,19 +1,49 @@
-// made by ws
-import fetch from 'node-fetch'
+import axios from 'axios'
 
-let handler = async (m, { text,  usedPrefix,  command }) => {
-    if (!text) throw `Hey is there anything I can help you with??`
-    let order = { text: wait, mentions: [m.sender], contextInfo: { forwardingScore: 256, isForwarded: true }};
-let aii = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${apilol}
-&text=${text}&user=user-unique-en`)
-  let oke = await aii.json()
-  let { key } = await conn.sendMessage(m.chat, order, { quoted: m });
-  await new Promise(resolve => setTimeout(resolve, 2000));
-  await conn.sendMessage(m.chat, { text: `${oke.result}`, edit: key }, { quoted: m });
+const payloads = {
+    prompt: ""
+};
+
+const handler = async (m, { conn, args, text, usedPrefix, command, isOwner }) => {
+  if (!text) throw `${usedPrefix}${command} hallo eula. apa kabar sayang?
+` 
+try {
+  const updatedPayloads = { ...payloads, prompt: text };
+  const { data } = await axios.request({
+    baseURL: "https://api.itsrose.life",
+    url: "/chatGPT/completions",
+    method: "POST",
+    headers: { Authorization: `${global.rose}` },
+    data: updatedPayloads,
+  }).catch((e) => e?.response);
+
+    const { status, message } = data;
+          await conn.sendMessage(m.chat, {
+                text: message,
+                contextInfo: {
+                    externalAdReply: {
+                        title: "ChatGPT",
+                        body: "",
+                        thumbnailUrl: "https://telegra.ph/file/b70c17d01e41146501827.jpg",
+                        sourceUrl: "",
+                        mediaType: 1,
+                        showAdAttribution: true,
+                        renderLargerThumbnail: true
+                    }
+                }
+          }, {quoted: m})
+      } catch(e) {
+      console.log(e)
+        m.reply('Server Down')
     }
+};
 
-handler.help = ['ai', 'openai', 'gpt']
+handler.help = ['openai'].map(v => v + ' <question>')
 handler.tags = ['ai']
-handler.command = /^(ai|openai|gpt)$/i
+handler.command = /^(ai|yula|openai|chatgpt)$/i
+
+handler.register = false
+handler.premium = false
+handler.limit = true
 
 export default handler
