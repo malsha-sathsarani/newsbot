@@ -9,7 +9,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 Usage: ${usage}
 
 ${title}
-${description}
+${description}\n\n*Jessi-md 💌*
 `.trim()
     conn.sendFile(m.chat, originalVideoUrl, null, cap, m)
 }
