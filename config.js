@@ -13,7 +13,7 @@ global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 
 // api key here okay
-global.rose = 'apikeylu'
+global.rose = 'xytW88StSQgW5YxSb4qYwHetUN9cfe7v0e2EEKVa4CRBp2812dtX86RJyyuVXnCD'
 global.lolkey = 'apikeymu'
 global.xkey = 'APIKEYMU'
 global.xyro = 'LyrK9JMI7N' 
@@ -52,7 +52,7 @@ global.APIKeys = { // APIKey Here
   'https://sekha.me': 'apirey',
   'https://api.chipa.xyz': 'pais',
   'http://hardianto.xyz': 'hardianto',
-  'https://api.itsrose.life': 'memek-apikeylu',
+  'https://api.itsrose.life': 'xytW88StSQgW5YxSb4qYwHetUN9cfe7v0e2EEKVa4CRBp2812dtX86RJyyuVXnCD',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
