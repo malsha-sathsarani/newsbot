@@ -13,14 +13,17 @@ global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 
 // api key here okay
-global.rose = 'xytW88StSQgW5YxSb4qYwHetUN9cfe7v0e2EEKVa4CRBp2812dtX86RJyyuVXnCD'
+global.rose = ''apikeylu''
 global.lolkey = 'apikeymu'
 global.xkey = 'APIKEYMU'
+global.lann = 'apikeylu'
 global.xyro = 'LyrK9JMI7N' 
 global.apilol = 'GataDios' 
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
+  TioXD: 'https://api.botcahx.eu.org',
+  lann: 'https://api.betabotz.eu.org',
   rose: 'https://api.itsrose.life',
   bg: 'http://bochil.ddns.net',
   zahir: 'https://zahirr-web.herokuapp.com',
