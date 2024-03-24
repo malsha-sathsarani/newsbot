@@ -13,7 +13,7 @@ global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 
 // api key here okay
-global.rose = ''apikeylu''
+global.rose = 'apikeylu'
 global.lolkey = 'apikeymu'
 global.xkey = 'APIKEYMU'
 global.lann = 'apikeylu'
