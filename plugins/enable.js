@@ -127,24 +127,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       global.opts['autoread'] = isEnable
       break
-    case 'pconly':
-    case 'privateonly':
-      isAll = true
-      if (!isROwner) {
-        global.dfail('rowner', m, conn)
-        throw false
-      }
-      global.opts['pconly'] = isEnable
-      break
-    case 'gconly':
-    case 'grouponly':
-      isAll = true
-      if (!isROwner) {
-        global.dfail('rowner', m, conn)
-        throw false
-      }
-      global.opts['gconly'] = isEnable
-      break
     case 'swonly':
     case 'statusonly':
       isAll = true
