@@ -15,6 +15,7 @@ global.prems = [] // Premium user has unlimited limit
 // api key here okay
 global.rose = 'apikeylu'
 global.lolkey = 'apikeymu'
+global.shizokeys = 'shizo'
 global.xkey = 'APIKEYMU'
 global.lann = 'apikeylu'
 global.xyro = 'LyrK9JMI7N' 
